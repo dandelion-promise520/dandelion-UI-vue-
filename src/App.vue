@@ -3,17 +3,50 @@ import { DlButton } from "./components/button";
 </script>
 
 <template>
-  <div class="layout">
-    <dl-button type="primary">点击</dl-button>
-    <dl-button :disabled="true">禁用</dl-button>
-    <dl-button :round="true">圆角</dl-button>
-    <dl-button :circle="true">圆</dl-button>
+  <div class="button-example">
+    <div class="button-row">
+      <dl-button>Default</dl-button>
+      <dl-button type="primary">Primary</dl-button>
+      <dl-button type="success">Success</dl-button>
+      <dl-button type="info">Info</dl-button>
+      <dl-button type="warning">Warning</dl-button>
+      <dl-button type="danger">Danger</dl-button>
+    </div>
+
+    <div class="button-row">
+      <dl-button plain>Default</dl-button>
+      <dl-button type="primary" plain>Primary</dl-button>
+      <dl-button type="success" plain>Success</dl-button>
+      <dl-button type="info" plain>Info</dl-button>
+      <dl-button type="warning" plain>Warning</dl-button>
+      <dl-button type="danger" plain>Danger</dl-button>
+    </div>
+
+    <div class="button-row">
+      <dl-button round>Round</dl-button>
+      <dl-button type="primary" round>Primary</dl-button>
+      <dl-button type="success" round>Success</dl-button>
+      <dl-button type="info" round>Info</dl-button>
+      <dl-button type="warning" round>Warning</dl-button>
+      <dl-button type="danger" round>Danger</dl-button>
+    </div>
+
+    <div class="button-row">
+      <dl-button type="primary" size="large">large</dl-button>
+      <dl-button type="primary" size="small">small</dl-button>
+    </div>
   </div>
 </template>
 
 <style scoped>
-.layout {
+.button-example {
   display: flex;
+  flex-direction: column;
   gap: 20px;
+
+  .button-row {
+    display: flex;
+    gap: 20px;
+  }
 }
 </style>

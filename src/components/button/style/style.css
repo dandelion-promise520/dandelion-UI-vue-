@@ -32,6 +32,7 @@
   font-weight: var(--dl-button-font-weight);
   user-select: none;
   vertical-align: middle;
+  background-color: var(--dl-button-bg-color);
   border: var(--dl-border);
   border-color: var(--dl-button-border-color);
   padding: 8px 12px;
@@ -100,5 +101,30 @@
     --dl-button-disabled-text-color: var(--dl-color-white);
     --dl-button-disabled-bg-color: var(--dl-color-$(val)-light-5);
     --dl-button-disabled-border-color: var(--dl-color-$(val)-light-5);
+  }
+  .dl-button-$(val).is-plain {
+    --dl-button-text-color: var(--dl-color-$(val));
+    --dl-button-bg-color: var(--dl-color-$(val)-light-9);
+    --dl-button-border-color: var(--dl-color-$(val)-light-5);
+    --dl-button-hover-text-color: var(--dl-color-white);
+    --dl-button-hover-bg-color: var(--dl-color-$(val));
+    --dl-button-hover-border-color: var(--dl-color-$(val));
+    --dl-button-active-text-color: var(--dl-color-white);
+  }
+
+  .dl-button-large {
+    --dl-button-size: 40px;
+    height: var(--dl-button-size);
+    padding: 12px 19px;
+    font-size: var(--dl-font-size-base);
+    border-radius: var(--dl-border-radius-base);
+  }
+
+  .dl-button-small {
+    --dl-button-size: 24px;
+    height: var(--dl-button-size);
+    padding: 5px 11px;
+    font-size: 12px;
+    border-radius: calc(var(--dl-border-radius-base) - 1px);
   }
 }
